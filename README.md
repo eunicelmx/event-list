@@ -1,6 +1,4 @@
-1. Create gif from videos then link them tgt with the slide images 
-1a. Ensure that every images clicked will be the same as the displayed image
-2. Check mobile and tablet version of skillsets
-3. Upload the event lists to new repository
-3a. Update description of project container a bit
-4. Update resume and link the resume to page
+Welcome to Eunice Lee's first event list design.
+Currently events are stored in a json file, for future versions would be viable to store the events in window session storage.
+
+how to use: pull from repository and run npm start.
