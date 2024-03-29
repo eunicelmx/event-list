@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/general.css">
+    <link rel="stylesheet" type="text/css" href="../css/smartphone_tablet_screen.css">
+    <link rel="stylesheet" type="text/css" href="../css/desktop_screen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="module" src="../js/index.js" defer></script>
+</head>
+<body>
+    <div id="body-wrapper">
+        <div id="big-word"></div>
+        <div id="calendar" class="flip-card">
+            <section id="currDT">
+                <div id="month-year">
+                    <span id="curr-month"></span>
+                    <span id="curr-year"></span>
+                    <span id="curr-date">&#x21bb;</span>
+                </div>
+                <div id="prev-next">
+                    <span id="prev"> &#9650;</span>
+                    <span id="next">&#9660;</span>
+                </div>
+            </section>
+    
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <section id="dates">
+                        <table id="calendar-dates">
+                            <thead>
+                                <tr id="days-header">
+                                    <th>Sun</th>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                </tr>
+                            </thead>
+                            <!--INSERT TABLE TR TD-->
+                        </table>
+                    </section>
+                </div>
+                <section id="events" class="flip-card-back">
+                    <h3 id="date-header">Date:</h3>
+                    <div class="line-break"></div>
+                    
+                    <!-- <div class="line-break"></div> -->
+                    <div id="events-header-container">
+                        <h3 id="events-header">Events:</h3>
+                        <div id="btns">
+                            <button id="add-event-btn" class="add-close-btns">+</button>
+                            <button id="close-event-btn" class="add-close-btns">x</button>
+                        </div>
+                    </div>
+                    <form id="add-event-form" action="/storeData" method="post">
+                        <h3>Add Event:</h3>
+                        <div class="input-containers">
+                            <input id="event-input" type="text" name="event" placeholder="what's the event?" required>
+                            <input id="time-input" type="time" name="time" step="3600" required>
+                        </div>
+                        <input type="hidden" name="date" id="form-date" value="">
+                        <input id="submit-event-btn" type="submit" value="Add">
+                        <input id="reset-event-btn" type="reset" value="Reset">
+                    </form>
+                    <div id="display-list-wrapper">
+                        <ul id="event-lists"></ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <footer>Designed by: Eunice Lee</footer>
+    </div>
+    
+</body>
+</html>
